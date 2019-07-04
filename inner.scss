@@ -128,22 +128,23 @@ header {
                 height: 219px;
                 position: absolute;
                 width: 100%;
-                p {
-                    margin-left: 16px;
+                span {
                     width: 123px;
+                    display: block;
+                    margin-left: 6%;
+                    margin-top: 6%;
                 }
-                p:first-of-type {
-                    margin-top: 27px;
+                span:first-of-type {
                     font-weight: bold;
                     font-size: 16.7833px;
                     line-height: 22px;
                 }
-                p:nth-of-type(2) {
+                span:nth-of-type(2) {
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 20px;
                 }
-                p:last-of-type {
+                span:last-of-type {
                     line-height: 21px;
                 }
                 img {
@@ -166,7 +167,7 @@ header {
                 border-bottom: 0px;
                 display: flex;
                 justify-content: space-between;
-                p {
+                span {
                     padding-left: 16.78px;
                     font-size: 19px;
                     line-height: 25px;
@@ -230,6 +231,8 @@ header {
                   
                   .slider.round {
                     border-radius: 34px;
+                    height: 10px;
+                    margin-top: 3%;
                   }
                   
                   .slider.round:before {
@@ -298,9 +301,10 @@ header {
     height: 716px;
     display: flex;
     justify-content: space-between;
-    background: url('images/interface_backgound.png');
+    background: url('images/interface_backgound.png') no-repeat;
+    background-size: 100%;
     .container {
-        padding-top: 200px;
+        padding-top: 14%;
         padding-left: 11%;
         width: 33%;
         p {
@@ -319,25 +323,29 @@ header {
     }
     .images {
         position: relative;
+        width: 56%;
         img {
             position: absolute;
         }
         img:first-of-type { 
-            top: 76px;
-            right: 247px;
-            width: 354px;
+            top: 11%;
+            right: 29.5%;
+            width: 46%;
         }
         img:nth-of-type(2) {
-            top: 132px;
-            right: 467px;
+            top: 19%;
+            left: 27%;
+            width: 15.2%;
         }
         img:nth-of-type(3) {
-            top: 452px;
-            right: 213px;
+            top: 63%;
+            right: 27%;
+            width: 15.2%;
         }
         img:last-of-type {
-            top: 504px;
-            right: 620px;
+            left: 16%;
+            top: 71%;
+            width: 7.7%;
         }
     }
 }
@@ -367,6 +375,9 @@ header {
                 svg {
                     margin-bottom: -10px;
                     fill: $backgroundColor;
+                }
+                p:before {
+                    content: "• ";
                 }
             }
             %feature {
@@ -452,16 +463,17 @@ header {
             float: left;
             margin-right: 11px;
         }
-        p:first-of-type {
+        span {
             font-weight: bold;
             font-size: 16px;
             line-height: 19px;
             vertical-align: middle;
             margin-top: 6px;
         }
-        p:last-of-type {
+        p {
             font-size: 14px;
             line-height: 18px;
+            margin-top: 18px;
         }
     }
 
@@ -480,11 +492,15 @@ header {
             margin-bottom: 58px;
             text-align: center;
         }
-        div {
+        ul {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            padding: 0;
+            li {
+                list-style: none;
+            }
         }
     }
 }
@@ -506,9 +522,10 @@ header {
     }
     section {
         width: 53.75%;
+        max-height: 100%;
         .container {
             max-width: 100%;
-            margin: 102px 10% 102px;
+            margin: 14.4% 10%;
         }
         h2 {
             letter-spacing: 0.2px;
@@ -529,22 +546,26 @@ footer {
     background: $brandColor;
     color: $backgroundColor;
     .container {
-        padding: 50px 162px 47px 163px;
+        padding: 45px 11% 45px;
         display: flex;
         justify-content: space-between;
         .contact {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 745px;
+            width: 65%;
+            max-height: 35px;
             nav {
                 a {
                     margin-right: 37px;
                 }
             }
-            section {
-                a {
+            ul {
+                padding: 0;
+                li {
                     margin-left: 17px;
+                    list-style: none;
+                    display: inline-block;
                 }
             }
             a {
@@ -578,18 +599,16 @@ footer {
 
     .interface {
         background-size: 100%;
+        height: 610px;
+        .container {
+            padding-top: 10%;
+        }
         .images {
-            img:first-of-type {
-                right: 119px;
-            }
-            img:nth-of-type(2) {
-                right: 363px;
-            }
             img:nth-of-type(3) {
-                right: 98px;
+                top: 57%;
             }
             img:last-of-type {
-                right: 430px;
+                top: 58%;
             }
         }
     }
@@ -607,9 +626,27 @@ footer {
         section {
             .container {
                 max-width: 100%;
-                margin: 82px 20% 102px;
+                margin: 9.5% 18%;
+                max-height: 100%;
+                p {
+                    margin-bottom: 13%;
+                    margin-top: 13%;
+                }
             }
         }
+    }
+
+    footer {
+        .container {
+            .contact {
+                width: 75%;
+                nav {
+                    a {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        } 
     }
     
 }
@@ -700,20 +737,20 @@ footer {
                         right: 4%;
                         left: auto;
                     }
-                    p {
+                    span {
                         width: 35%;
+                        margin-top: 4%;
                     }
-                    p:first-of-type {
+                    span:first-of-type {
                         font-size: 11.5px;
                         line-height: 15px;
                         margin-top: 15px;
                     }
-                    p:nth-of-type(2) {
+                    span:nth-of-type(2) {
                         font-size: 12.35px;
                         line-height: 16px;
-                        margin-top: 0px;
                     }
-                    p:last-of-type {
+                    span:last-of-type {
                         font-size: 11px;
                         line-height: 14px;
                     }
@@ -721,7 +758,7 @@ footer {
 
                 .turn {
                     height: 40px;
-                    p {
+                    span {
                         font-size: 13px;
                         line-height: 17px;
                         padding-left: 5%;
@@ -741,7 +778,6 @@ footer {
                 left: auto;
                 width: 253px;
             }
-
         }
 
         article{
@@ -786,6 +822,7 @@ footer {
             background: url('images/interface_backgound2.png');
             background-size: 100%;
             min-height: 565px;
+            width: 100%;
             img:first-of-type {
                 margin-top: 20%;
                 max-width: 78%;
@@ -828,6 +865,9 @@ footer {
                     margin-bottom: 34px;
                     svg {
                         fill: $brandColor;
+                    }
+                    p:before {
+                        content: "";
                     }
                 }
 
@@ -971,22 +1011,25 @@ footer {
             flex-direction: column;
             padding-top: 41px;
             align-items: flex-start;
+            max-height: 100%;
+            height: 74%;
             .contact {
                 width: 100%;
-                margin: 11px auto 0;
+                margin: 0 auto;
                 flex-direction: column-reverse;
                 align-items: flex-start;
                 nav {
-                    margin-top: 27px;
+                    margin-top: 5px;
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
+                    margin-bottom: 24px;
                     a {
                         margin: 0;
                     }
                 }
-                section {
-                    a {
+                ul {
+                    li {
                         margin-left: 0;
                         margin-right: 10px;
                     }   
@@ -1009,6 +1052,9 @@ footer {
 
     .interface {
         .images {
+            img:first-of-type {
+                width: 78%;
+            }
             img:nth-of-type(2),
             img:nth-of-type(3) {
                 width: 27%;
@@ -1027,11 +1073,12 @@ footer {
     .references {
         min-height: 369px;
         .container {
-            img:last-child {
-                margin: auto;
+            li {
+                min-width: 31%;
             }
-            img {
-                margin-left: 4%;
+            li:last-child {
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }

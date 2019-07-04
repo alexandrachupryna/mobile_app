@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .experience article .topic, .topic, .learn {
   font-weight: bold;
   line-height: 21px;
@@ -6,7 +7,8 @@
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #fff;
   font-family: 'Lato', sans-serif;
   font-style: normal;
@@ -68,20 +70,24 @@ header {
       max-width: 35.53%; }
 
 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 348px;
-  justify-content: space-between; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .buttons img {
     width: 148px; }
 
 .experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .experience .football {
     height: 592px;
     display: block;
     background-image: -webkit-gradient(linear, right top, left top, color-stop(5.16%, #fff), color-stop(67.14%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.5))), url("images/Cristiano-Ronaldo.jpg");
-    background-image: -webkit-linear-gradient(right, #fff 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)), url("images/Cristiano-Ronaldo.jpg");
-    background-image: -o-linear-gradient(right, #fff 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)), url("images/Cristiano-Ronaldo.jpg");
     background-image: linear-gradient(270deg, #fff 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)), url("images/Cristiano-Ronaldo.jpg");
     background-size: cover;
     background-position: center;
@@ -90,7 +96,8 @@ header {
     .experience .football .notification {
       top: 18.5%;
       left: 21%;
-      box-shadow: -22.0416px 23.8785px 48.9814px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: -22.0416px 23.8785px 48.9814px rgba(0, 0, 0, 0.5);
+              box-shadow: -22.0416px 23.8785px 48.9814px rgba(0, 0, 0, 0.5);
       position: absolute;
       z-index: 1;
       border-radius: 4px; }
@@ -99,19 +106,20 @@ header {
         height: 219px;
         position: absolute;
         width: 100%; }
-        .experience .football .notification .match p {
-          margin-left: 16px;
-          width: 123px; }
-        .experience .football .notification .match p:first-of-type {
-          margin-top: 27px;
+        .experience .football .notification .match span {
+          width: 123px;
+          display: block;
+          margin-left: 6%;
+          margin-top: 6%; }
+        .experience .football .notification .match span:first-of-type {
           font-weight: bold;
           font-size: 16.7833px;
           line-height: 22px; }
-        .experience .football .notification .match p:nth-of-type(2) {
+        .experience .football .notification .match span:nth-of-type(2) {
           font-weight: 500;
           font-size: 18px;
           line-height: 20px; }
-        .experience .football .notification .match p:last-of-type {
+        .experience .football .notification .match span:last-of-type {
           line-height: 21px; }
         .experience .football .notification .match img {
           position: absolute;
@@ -127,9 +135,13 @@ header {
         bottom: 0;
         width: 100%;
         border-bottom: 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between; }
-        .experience .football .notification .turn p {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .experience .football .notification .turn span {
           padding-left: 16.78px;
           font-size: 19px;
           line-height: 25px;
@@ -167,17 +179,20 @@ header {
           background-color: white;
           -webkit-transition: .4s;
           transition: .4s;
-          box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25); }
+          -webkit-box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
+                  box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25); }
         .experience .football .notification .turn input:checked + .slider {
           background-color: #00ADEE; }
         .experience .football .notification .turn input:focus + .slider {
-          box-shadow: 0 0 1px #00ADEE; }
+          -webkit-box-shadow: 0 0 1px #00ADEE;
+                  box-shadow: 0 0 1px #00ADEE; }
         .experience .football .notification .turn input:checked + .slider:before {
           -webkit-transform: translateX(26px);
-          -ms-transform: translateX(26px);
           transform: translateX(26px); }
         .experience .football .notification .turn .slider.round {
-          border-radius: 34px; }
+          border-radius: 34px;
+          height: 10px;
+          margin-top: 3%; }
         .experience .football .notification .turn .slider.round:before {
           border-radius: 50%; }
     .experience .football video {
@@ -215,11 +230,16 @@ header {
 
 .interface {
   height: 716px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  background: url("images/interface_backgound.png"); }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("images/interface_backgound.png") no-repeat;
+  background-size: 100%; }
   .interface .container {
-    padding-top: 200px;
+    padding-top: 14%;
     padding-left: 11%;
     width: 33%; }
     .interface .container p {
@@ -232,22 +252,26 @@ header {
       margin-top: 23px;
       margin-bottom: 55px; }
   .interface .images {
-    position: relative; }
+    position: relative;
+    width: 56%; }
     .interface .images img {
       position: absolute; }
     .interface .images img:first-of-type {
-      top: 76px;
-      right: 247px;
-      width: 354px; }
+      top: 11%;
+      right: 29.5%;
+      width: 46%; }
     .interface .images img:nth-of-type(2) {
-      top: 132px;
-      right: 467px; }
+      top: 19%;
+      left: 27%;
+      width: 15.2%; }
     .interface .images img:nth-of-type(3) {
-      top: 452px;
-      right: 213px; }
+      top: 63%;
+      right: 27%;
+      width: 15.2%; }
     .interface .images img:last-of-type {
-      top: 504px;
-      right: 620px; }
+      left: 16%;
+      top: 71%;
+      width: 7.7%; }
 
 .features, .features .container h2 {
   color: #fff; }
@@ -261,15 +285,22 @@ header {
       text-align: center;
       margin-bottom: 54px; }
     .features .container .feature-items {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
       .features .container .feature-items .feature-item {
         width: 28.02%;
         margin-bottom: 30px; }
         .features .container .feature-items .feature-item svg {
           margin-bottom: -10px;
           fill: #fff; }
+        .features .container .feature-items .feature-item p:before {
+          content: "• "; }
       .features .container .feature-items .feature-item:nth-child(7), .features .container .feature-items .feature-item:nth-child(8), .features .container .feature-items .feature-item:last-child {
         margin-top: -14px; }
         .features .container .feature-items .feature-item:nth-child(7) p, .features .container .feature-items .feature-item:nth-child(8) p, .features .container .feature-items .feature-item:last-child p {
@@ -310,8 +341,6 @@ header {
     width: 100%;
     height: 100%;
     background: -webkit-gradient(linear, right top, left top, color-stop(1%, white), color-stop(5%, rgba(255, 255, 255, 0.5)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(95%, rgba(255, 255, 255, 0.5)), color-stop(99%, white));
-    background: -webkit-linear-gradient(right, white 1%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 95%, white 99%);
-    background: -o-linear-gradient(right, white 1%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 95%, white 99%);
     background: linear-gradient(270deg, white 1%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 95%, white 99%); }
   .feedbacks .glider-slide {
     min-height: 150px;
@@ -319,7 +348,8 @@ header {
     width: 353px;
     height: 161px;
     border: 1px solid #828282;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 4px;
     height: 161px;
     background: url("images/twitter.png") no-repeat top 24px right 13px;
@@ -327,15 +357,16 @@ header {
     .feedbacks .glider-slide img {
       float: left;
       margin-right: 11px; }
-    .feedbacks .glider-slide p:first-of-type {
+    .feedbacks .glider-slide span {
       font-weight: bold;
       font-size: 16px;
       line-height: 19px;
       vertical-align: middle;
       margin-top: 6px; }
-    .feedbacks .glider-slide p:last-of-type {
+    .feedbacks .glider-slide p {
       font-size: 14px;
-      line-height: 18px; }
+      line-height: 18px;
+      margin-top: 18px; }
   .feedbacks .glider {
     height: 161px; }
 
@@ -348,14 +379,26 @@ header {
     .references .container h2 {
       margin-bottom: 58px;
       text-align: center; }
-    .references .container div {
+    .references .container ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap; }
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding: 0; }
+      .references .container ul li {
+        list-style: none; }
 
 .score-center {
   height: 483px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .score-center .phones {
     width: 46.25%;
@@ -367,10 +410,11 @@ header {
       bottom: 0;
       max-width: 120%; }
   .score-center section {
-    width: 53.75%; }
+    width: 53.75%;
+    max-height: 100%; }
     .score-center section .container {
       max-width: 100%;
-      margin: 102px 10% 102px; }
+      margin: 14.4% 10%; }
     .score-center section h2 {
       letter-spacing: 0.2px; }
     .score-center section p {
@@ -385,18 +429,33 @@ footer {
   background: #00ADEE;
   color: #fff; }
   footer .container {
-    padding: 50px 162px 47px 163px;
+    padding: 45px 11% 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     footer .container .contact {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 745px; }
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 65%;
+      max-height: 35px; }
       footer .container .contact nav a {
         margin-right: 37px; }
-      footer .container .contact section a {
-        margin-left: 17px; }
+      footer .container .contact ul {
+        padding: 0; }
+        footer .container .contact ul li {
+          margin-left: 17px;
+          list-style: none;
+          display: inline-block; }
       footer .container .contact a {
         text-decoration: none;
         color: #fff;
@@ -415,15 +474,14 @@ footer {
       width: 80%; }
 
   .interface {
-    background-size: 100%; }
-    .interface .images img:first-of-type {
-      right: 119px; }
-    .interface .images img:nth-of-type(2) {
-      right: 363px; }
+    background-size: 100%;
+    height: 610px; }
+    .interface .container {
+      padding-top: 10%; }
     .interface .images img:nth-of-type(3) {
-      right: 98px; }
+      top: 57%; }
     .interface .images img:last-of-type {
-      right: 430px; }
+      top: 58%; }
 
   .feedbacks .glider-dots .glider-dot:nth-child(8),
   .feedbacks .glider-dots .glider-dot:nth-child(9) {
@@ -431,7 +489,16 @@ footer {
 
   .score-center section .container {
     max-width: 100%;
-    margin: 82px 20% 102px; } }
+    margin: 9.5% 18%;
+    max-height: 100%; }
+    .score-center section .container p {
+      margin-bottom: 13%;
+      margin-top: 13%; }
+
+  footer .container .contact {
+    width: 75%; }
+    footer .container .contact nav a {
+      margin-right: 20px; } }
 @media (max-width: 800px) {
   .interface .container, .features .container, .feedbacks .glider-contain, footer .container {
     width: 88.89%;
@@ -463,14 +530,15 @@ footer {
       line-height: 40px; }
 
   .experience {
-    flex-direction: column-reverse; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
     .experience .football.container {
       width: 100%;
       height: 388px;
       display: block;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5.16%, #fff), color-stop(67.14%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.5))), url("images/Cristiano-Ronaldo.jpg");
-      background-image: -webkit-linear-gradient(top, #fff 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)), url("images/Cristiano-Ronaldo.jpg");
-      background-image: -o-linear-gradient(top, #fff 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)), url("images/Cristiano-Ronaldo.jpg");
       background-image: linear-gradient(to bottom, #fff 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)), url("images/Cristiano-Ronaldo.jpg"); }
       .experience .football.container .notification, .experience .football.container video {
         max-width: 69%;
@@ -494,22 +562,22 @@ footer {
           .experience .football.container .notification .match img:last-of-type {
             right: 4%;
             left: auto; }
-          .experience .football.container .notification .match p {
-            width: 35%; }
-          .experience .football.container .notification .match p:first-of-type {
+          .experience .football.container .notification .match span {
+            width: 35%;
+            margin-top: 4%; }
+          .experience .football.container .notification .match span:first-of-type {
             font-size: 11.5px;
             line-height: 15px;
             margin-top: 15px; }
-          .experience .football.container .notification .match p:nth-of-type(2) {
+          .experience .football.container .notification .match span:nth-of-type(2) {
             font-size: 12.35px;
-            line-height: 16px;
-            margin-top: 0px; }
-          .experience .football.container .notification .match p:last-of-type {
+            line-height: 16px; }
+          .experience .football.container .notification .match span:last-of-type {
             font-size: 11px;
             line-height: 14px; }
         .experience .football.container .notification .turn {
           height: 40px; }
-          .experience .football.container .notification .turn p {
+          .experience .football.container .notification .turn span {
             font-size: 13px;
             line-height: 17px;
             padding-left: 5%; }
@@ -535,7 +603,10 @@ footer {
         max-width: 100%; }
 
   .interface {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: auto;
     background: #fff; }
     .interface .container {
@@ -550,7 +621,8 @@ footer {
     .interface .images {
       background: url("images/interface_backgound2.png");
       background-size: 100%;
-      min-height: 565px; }
+      min-height: 565px;
+      width: 100%; }
       .interface .images img:first-of-type {
         margin-top: 20%;
         max-width: 78%;
@@ -580,6 +652,8 @@ footer {
         margin-bottom: 34px; }
         .features .container .feature-items .feature-item svg {
           fill: #00ADEE; }
+        .features .container .feature-items .feature-item p:before {
+          content: ""; }
       .features .container .feature-items .feature-item:nth-child(7),
       .features .container .feature-items .feature-item:nth-child(8),
       .features .container .feature-items .feature-item:last-child {
@@ -647,7 +721,10 @@ footer {
 
   .score-center {
     height: auto;
-    flex-direction: column-reverse; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
     .score-center .phones {
       height: 261px;
       width: 100%;
@@ -678,22 +755,39 @@ footer {
     height: 210px; }
     footer .container {
       padding: 0;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       padding-top: 41px;
-      align-items: flex-start; }
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      max-height: 100%;
+      height: 74%; }
       footer .container .contact {
         width: 100%;
-        margin: 11px auto 0;
-        flex-direction: column-reverse;
-        align-items: flex-start; }
+        margin: 0 auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
         footer .container .contact nav {
-          margin-top: 27px;
+          margin-top: 5px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: space-between;
-          width: 100%; }
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          width: 100%;
+          margin-bottom: 24px; }
           footer .container .contact nav a {
             margin: 0; }
-        footer .container .contact section a {
+        footer .container .contact ul li {
           margin-left: 0;
           margin-right: 10px; } }
 @media (max-width: 600px) {
@@ -703,6 +797,8 @@ footer {
     width: 100%;
     margin: 0 auto; }
 
+  .interface .images img:first-of-type {
+    width: 78%; }
   .interface .images img:nth-of-type(2),
   .interface .images img:nth-of-type(3) {
     width: 27%; }
@@ -712,10 +808,11 @@ footer {
 
   .references {
     min-height: 369px; }
-    .references .container img:last-child {
-      margin: auto; }
-    .references .container img {
-      margin-left: 4%; }
+    .references .container li {
+      min-width: 31%; }
+    .references .container li:last-child {
+      margin-left: auto;
+      margin-right: auto; }
 
   .score-center {
     height: 703px; }
